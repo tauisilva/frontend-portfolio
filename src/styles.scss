@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-
-/*=============== VARIABLES CSS ===============*/
 :root {
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
@@ -14,6 +12,7 @@
   --hue: 207;
   --sat: 90%;
   --lig: 61%;
+
   --first-color: hsl(var(--hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--hue), var(--sat), 57%); /* -4% */
   --title-color: hsl(var(--hue), 12%, 15%);
@@ -21,16 +20,31 @@
   --text-color-light: hsl(var(--hue), 8%, 75%);
   --text-color-lighten: hsl(var(--hue), 8%, 92%);
   --body-color: hsl(var(--hue), 100%, 99%);
+  --scrollbar: hsl(var(--hue), 8%, 66%);
+  --scrollbar-thumb: hsl(var(--hue), 8%, 54%);
+  --scrollbar-thumb-hover: hsl(var(--hue), 8%, 44%);
   --container-color: #fff;
 
-  /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: "Poppins", sans-serif;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+}
+
+:root .dark-theme {
+  --title-color: hsl(var(--hue), 12%, 95%);
+  --text-color: hsl(var(--hue), 12%, 75%);
+  --body-color: hsl(var(--hue), 40%, 8%);
+  --text-color-lighten: var(--container-color);
+  --container-color: hsl(var(--hue), 24%, 12%);
+  --text-color-light: hsl(var(--hue), 24%, 25%);
+
+  --scrollbar: hsl(var(--hue), 8%, 16%);
+  --scrollbar-thumb: hsl(var(--hue), 8%, 24%);
+  --scrollbar-thumb-hover: hsl(var(--hue), 8%, 32%);
 }
 
 @media screen and (min-width: 968px) {
@@ -38,12 +52,11 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
   }
 }
 
-/*=============== BASE ===============*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -55,10 +68,12 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: .3s; /* For animation dark mode */
+  transition: 0.3s;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
   font-weight: 600;
 }
@@ -76,19 +91,6 @@ img {
   height: auto;
 }
 
-/*=============== THEME ===============*/
-
-
-/*========== Variables Dark theme ==========*/
-
-
-/*========== 
-    Color changes in some parts of 
-    the website, in light theme
-==========*/
-
-
-/*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 968px;
   margin-left: 1.5rem;
@@ -98,4 +100,44 @@ img {
 .grid {
   display: grid;
   gap: 1.5rem;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1.15rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  box-shadow: 0 8px 24px hsl(var(--hue), var(--sat), var(--lig), 0.25);
+
+  i {
+    font-size: 1.25rem;
+  }
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
+}
+.btn-small {
+  padding: 0.5rem 0.75rem !important;
+  box-shadow: none !important;
+}
+.active {
+  background-color: var(--body-color) !important;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: var(--scrollbar);
+  transition: .3s;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: var(--scrollbar-thumb);
+  transition: .3s;
+  &:hover {
+    background-color: var(var(--scrollbar-thumb-hover));
+  }
 }

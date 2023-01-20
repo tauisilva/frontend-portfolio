@@ -7,5 +7,7 @@ import { Component} from '@angular/core';
 })
 export class ToolbarComponent {
 
-
+  public toggle(){
+    document.body.classList.toggle('dark-theme')
+  }
 }

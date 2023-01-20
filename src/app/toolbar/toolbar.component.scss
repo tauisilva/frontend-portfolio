@@ -2,6 +2,18 @@
 .profile{
     position: relative;
     padding-top: 3.5rem;
+    .theme-control{
+        position: absolute;
+        top: 1.5rem;
+        right: 0;
+        font-size: 1.25rem;
+        color: var(--title-color);
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+            color: var(--first-color);
+        }
+    }
     .profile__container{
         row-gap: 2rem;
         .data{
@@ -82,35 +94,16 @@
         }
         .btns-prof{
             column-gap: 1rem;
-            .button{
-                display: inline-flex;
-                align-items: center;
-                column-gap: .5rem;
-                background-color: var(--first-color);
-                color: #fff;
-                padding: 1.15rem 1.5rem;
-                border-radius: .5rem;
-                transition: .3s;
-                box-shadow:  0 8px 24px hsl(var(--hue), var(--sat), var(--lig), .25);
-
-                i{
-                    font-size: 1.25rem;
-                }
-                &:hover{
-                    background-color: var(--first-color-alt);
-                }
-            }
             .prof-btn_small{
                 column-gap: .25rem;
                 .btn-small{
-                    padding: 0.75rem;
-                    box-shadow: none;
                     background-color: var(--text-color-lighten);
                     color: var(--text-color);
                     &:hover{
                         background-color: var(--text-color-light);
                     }
-                }
+                  }
+                  
             }
         }
     }
