@@ -45,3 +45,25 @@
         bottom: 0;
     }
 }
+@media screen and (max-width: 320px) {
+    .projects__card{
+        height: 150px;
+    }
+}
+@media screen and (min-width: 576px) {
+    .projects-content{
+        grid-template-columns: 332px;
+        justify-content: center;
+    }
+    .projects__card{
+        height: 200px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .projects-content{
+        gap: 2rem 3rem;
+        .projects-modal{
+            padding: 1.5rem;
+        }
+    }
+}

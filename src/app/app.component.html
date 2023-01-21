@@ -1,20 +1,26 @@
-<app-toolbar></app-toolbar>
-<main class="main">
-    <section class="filters container">
-        <ul  class="filters-content">
-            <button routerLinkActive="active" routerLink="/projects" class="filters-btn" data-target="#projects">
-                Projetos
-            </button>
-            <button routerLinkActive="active" routerLink="/skills" class="filters-btn" data-target="#skills">
-                Skills
-            </button>
-        </ul>
-        <div class="filters-sections">
-            <div class="grid" data-content >
-                <router-outlet></router-outlet>
-            </div>
-        </div>
+<section class="max container">
+    <section class="container">
+        <app-toolbar></app-toolbar>
+        <main class="main">
+            <section class="filters container">
+                <ul class="filters-content">
+                    <button routerLinkActive="active" routerLink="/projects" class="filters-btn"
+                        data-target="#projects">
+                        Projetos
+                    </button>
+                    <button routerLinkActive="active" routerLink="/skills" class="filters-btn" data-target="#skills">
+                        Skills
+                    </button>
+                </ul>
+                <div class="filters-sections">
+                    <div class="grid" data-content>
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+
+            </section>
+        </main>
 
     </section>
-</main>
-<app-footer></app-footer>
+    <app-footer></app-footer>
+</section>

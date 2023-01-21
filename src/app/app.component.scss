@@ -1,3 +1,9 @@
+.max{
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
 .filters-content{
     margin: 2rem 0 2.5rem;
     background-color: var(--text-color-lighten);
@@ -22,5 +28,11 @@
         &:hover{
             background-color: var(--body-color);
         }
+    }
+}
+@media screen and (min-width: 576px) {
+    .filters-content{
+        width: 332px;
+        margin: 3rem auto;
     }
 }

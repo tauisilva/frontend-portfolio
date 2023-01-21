@@ -69,6 +69,8 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   transition: 0.3s;
+  height: 100vh;
+  width: 100vw;
 }
 
 h1,
@@ -139,5 +141,25 @@ img {
   transition: .3s;
   &:hover {
     background-color: var(var(--scrollbar-thumb-hover));
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container{
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
+}
+@media screen and (min-width: 776px) {
+  .projects-content,
+  .skills-container{
+    grid-template-columns: repeat(2, 332px) !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container{
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }

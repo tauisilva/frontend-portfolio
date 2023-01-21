@@ -1,7 +1,17 @@
+.footer{
+    display: flex;
+    justify-content: center;    
+}
 .footer_copy{
     display: block;
+    // position: absolute;
+    bottom: 0;
     margin: 2.5rem 0 2rem;
-    text-align: center;
     font-size: var(--smaller-font-size);
     color: var(--text-color-light);
+}
+@media screen and (min-width: 992px) {
+    .footer_copy{
+        margin: 4.5rem 0 2.5rem;
+    }
 }
