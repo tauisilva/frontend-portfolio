@@ -5,6 +5,7 @@ import { ProjectsCardComponent } from './projects-card/projects-card.component';
 import { SkillsComponent } from './skills/skills.component';
 
 const routes: Routes = [
+  { path: '', component: ProjectsCardComponent},
   { path: 'projects', component: ProjectsCardComponent},
   { path: 'skills', component: SkillsComponent}
 ];

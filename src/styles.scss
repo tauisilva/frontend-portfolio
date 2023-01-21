@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-:root {
+:root .dark-theme{
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   /*
@@ -34,7 +34,13 @@
   --smaller-font-size: 0.75rem;
 }
 
-:root .dark-theme {
+:root {
+  --hue: 207;
+  --sat: 90%;
+  --lig: 61%;
+
+  --first-color: hsl(var(--hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--hue), var(--sat), 57%);
   --title-color: hsl(var(--hue), 12%, 95%);
   --text-color: hsl(var(--hue), 12%, 75%);
   --body-color: hsl(var(--hue), 40%, 8%);
@@ -45,6 +51,14 @@
   --scrollbar: hsl(var(--hue), 8%, 16%);
   --scrollbar-thumb: hsl(var(--hue), 8%, 24%);
   --scrollbar-thumb-hover: hsl(var(--hue), 8%, 32%);
+
+
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 }
 
 @media screen and (min-width: 968px) {
